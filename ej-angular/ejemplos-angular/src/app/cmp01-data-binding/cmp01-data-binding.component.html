@@ -5,8 +5,8 @@
 
 
 <h3>Property Binding</h3>
-<input type="text" [placeholder]="nombre">
-<input type="text" [placeholder]="nombre2 ? nombre2 : 'Inroduce un nombre'">
+<input type="text" [value]="nombre">
+<input type="text" [value]="nombre2 ? nombre2 : 'Inroduce un nombre'">
 
 
 <h3>Event Binding</h3>
@@ -17,4 +17,4 @@
 <h3>Two Way Data Binding</h3>
 
 <h3>Ejercicio simula Two Way Data Binding</h3>
-<input type="text" [placeholder]="nombre" (input)="cambiarNombre2($event)">
+<input type="text" [value]="nombre" (input)="cambiarNombre2($event)">
