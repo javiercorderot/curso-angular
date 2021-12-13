@@ -1,0 +1,20 @@
+<h2>Data binding</h2>
+
+<h3>String Interpolation</h3>
+<p>Nombre: {{nombre}}</p>
+
+
+<h3>Property Binding</h3>
+<input type="text" [placeholder]="nombre">
+<input type="text" [placeholder]="nombre2 ? nombre2 : 'Inroduce un nombre'">
+
+
+<h3>Event Binding</h3>
+
+<button (click)="cambiarNombre()">Cambiar nombre</button>
+
+
+<h3>Two Way Data Binding</h3>
+
+<h3>Ejercicio simula Two Way Data Binding</h3>
+<input type="text" [placeholder]="nombre" (input)="cambiarNombre2($event)">
