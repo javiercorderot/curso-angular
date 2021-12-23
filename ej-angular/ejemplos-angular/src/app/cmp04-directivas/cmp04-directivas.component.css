@@ -1,0 +1,11 @@
+.letraBlanca{
+    color: white;
+}
+
+.fondoNegro{
+    background-color: black;
+}
+
+.completada{
+    text-decoration: line-through;
+}

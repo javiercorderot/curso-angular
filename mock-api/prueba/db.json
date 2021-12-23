@@ -1,0 +1,40 @@
+{
+  "noticias": [
+    {
+      "id": 1,
+      "titulo": "El año de blalalslla",
+      "contenido": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa dicta provident nostrum nesciunt ea ab at consequuntur placeat, quisquam, labore officiis aut maiores ex perferendis illum libero pariatur quos modi?",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "titulo": "Noticia numero 2",
+      "contenido": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa dicta provident nostrum nesciunt ea ab at consequuntur placeat, quisquam, labore officiis aut maiores ex perferendis illum libero pariatur quos modi?",
+      "userId": 2
+    },
+    {
+      "titulo": "qasaf",
+      "contenido": "asfasfa",
+      "userId": 1,
+      "id": 3
+    }
+  ],
+  "users": [
+    {
+      "nombre": "usuario1",
+      "username": "usuario",
+      "password": "123",
+      "email": "aaa@gmail.com",
+      "rol": "USER",
+      "id": 1
+    },
+    {
+      "nombre": "usuarionombre",
+      "username": "usuario",
+      "password": "123",
+      "email": "usuaria@gmail.com",
+      "rol": "USER",
+      "id": 2
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+<h3>Componente A</h3>
+
+<input type="text" #inputTxt>
+<button (click)="guardar(inputTxt.value)">Guardar</button>
+<ul>
+    <li *ngFor="let dato of datos"> {{dato}} </li>
+</ul>

@@ -1,0 +1,11 @@
+<div>
+    <h4>Suscripcion a {{plataforma}} </h4>
+    <p>Precio: {{precio | currency:'EUR'}} </p>
+    <p>Estado: {{activa ? 'Activa' : 'No activa'}} </p>
+    <p>Fecha próxima renovación {{fechaProximoPago | date:'hh:mm:ss'}} </p>
+
+    <button *ngIf="!activa;else btnDesactivar" (click)="activarSuscripcion()">Activar suscripción</button>
+    <ng-template #btnDesactivar>
+        <button (click)="cancelarSuscripcion()">Cancelar suscripción</button>
+    </ng-template>
+</div>

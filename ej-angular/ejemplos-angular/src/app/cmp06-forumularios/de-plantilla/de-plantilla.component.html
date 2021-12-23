@@ -1,0 +1,25 @@
+<h3>De plantilla</h3>
+
+<form (ngSubmit)="registro(formulario)" #formulario="ngForm">
+    <div>
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" [ngModel]="datosFormulario.username" required minlength="5" #inputUsername="ngModel">
+        <app-error *ngIf="inputUsername.invalid && inputUsername.dirty" [errores]="inputUsername.errors"></app-error>
+    </div>
+
+    <div>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email"[ngModel]="datosFormulario.email" required pattern="[a-z]+@[a-z]+\.[a-z]{2,3}" #inputEmail="ngModel">
+        <app-error *ngIf="inputEmail.invalid && inputEmail.dirty" [errores]="inputEmail.errors"></app-error>
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" [ngModel]="datosFormulario.password" required minlength="8" #inputPassword="ngModel">
+        <app-error *ngIf="inputPassword.invalid && inputPassword.dirty" [errores]="inputPassword.errors"></app-error>
+    </div>
+
+    <button type="submit" [disabled]="formulario.invalid">Registrar</button>
+
+    
+</form>
+

@@ -1,2 +1,42 @@
 <h1>Curso Angular 13</h1>
-<app-cmp01-data-binding></app-cmp01-data-binding>
+<!--<app-cmp01-data-binding></app-cmp01-data-binding>-->
+<!--<app-cmp02-variables-de-plantilla></app-cmp02-variables-de-plantilla>-->
+<!--<app-cmp03-input-y-output></app-cmp03-input-y-output>-->
+<!-- <app-cmp04-directivas></app-cmp04-directivas> -->
+<!-- <app-cmp05-pipes></app-cmp05-pipes> -->
+<!--<app-cmp06-forumularios></app-cmp06-forumularios> -->
+<!--<app-cmp07-servicios></app-cmp07-servicios>-->
+
+<!-- <app-cmp08-observables></app-cmp08-observables> -->
+<!-- 
+<app-cmp09-http></app-cmp09-http> -->
+
+
+
+<button *ngIf="isLoggedIn;else btnLogin" (click)="logout()">Logout</button>
+
+<!-- <app-cmp10-autenticacion *ngIf="isLoggedIn"></app-cmp10-autenticacion> -->
+
+
+<ng-template #btnLogin>
+    <form (ngSubmit)="login()" [formGroup]="formLogin">
+        <div>
+            <label for="email">Email</label>
+            <input type="email" formControlName="email">
+        </div>
+        <div>
+            <label for="password">Contraseña</label>
+            <input type="password" formControlName="password">
+        </div>
+        <button type="submit">Login</button>
+    </form>
+    
+    
+</ng-template>
+
+
+<!-- <app-cmp11-routing></app-cmp11-routing> -->
+
+<!-- <app-cmp12-modulos-y-lazy-loading></app-cmp12-modulos-y-lazy-loading> -->
+
+<app-cmp14-testing></app-cmp14-testing>

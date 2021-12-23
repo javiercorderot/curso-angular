@@ -1,0 +1,43 @@
+<h2>Directivas</h2>
+
+<h3>De atributo</h3>
+
+<p [ngStyle]="{color: colorLetra, backgroundColor: 'black'}">El fondo es negro y la letra blanca</p>
+<p [ngClass]="{completada : tachada, fondoNegro: true, letraBlanca: true}">Letra tachada si true, si no false. Fondo negro, letra blanca</p>
+
+<input type="color" [(ngModel)]="colorLetra">
+
+<button (click)="toggleTachada()">Boton tachar</button>
+
+
+<h3>Estructurales</h3>
+
+<button *ngIf="!logueado;else logoutBtn" (click)="toggleLogueado()">Login</button>
+
+<ng-template #logoutBtn>
+    <button (click)="toggleLogueado()">Logout</button>
+</ng-template>
+
+<ul>
+    <li *ngFor="let mascota of mascotas; let pos = index; let esPrimero = first; let esUltimo = last"> 
+        {{pos + 1 }} : {{mascota}} {{esPrimero && ('||Es el primero')}} {{esUltimo && ('||Es el último')}}
+    </li>
+</ul>
+
+
+<input type="text" [(ngModel)]="mascotaSeleccionada">
+
+<div [ngSwitch]="mascotaSeleccionada">
+   <!--
+    <p *ngSwitchCase="'perro'">Tengo un perro</p>
+    <p *ngSwitchCase="'gato'">Tengo un gato</p>--> 
+    <ng-container *ngFor="let mascota of mascotas">
+        <p *ngSwitchCase="mascota">Tengo {{mascota}} </p>
+    </ng-container>
+    <p *ngSwitchDefault>Tengo otra mascota</p>
+</div>
+
+
+
+<input type="text" appPowerMode>
+

@@ -1,0 +1,6 @@
+<video src="assets/video.mp4" width="200px" #video></video>
+
+<button (click)="play(video)">Play</button>
+<button (click)="pause(video)">Pause</button>
+
+<input type="range" min="0" max="100" (input)="cambiarVolumen(video, $event)">

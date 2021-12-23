@@ -1,0 +1,41 @@
+<h2>Pipes</h2>
+
+
+<h3>Sin Pipes</h3>
+<div>
+    <h5> {{producto.titulo | reverse}} </h5>
+    <p> {{producto.descripcion | ocultarPalabras:'Lorem' }}</p>
+    <div>
+        <h5> {{producto.precio}} </h5>
+        <h5> {{producto.fechaLanzamiento}} </h5>
+    </div>
+</div>
+
+
+<h3>Con pipes</h3>
+<div>
+    <h5> {{producto.titulo | titlecase}} </h5>
+    <p> {{producto.descripcion | slice:0:30}}... </p>
+    <div>
+        <h5> {{producto.precio | doble:200 | currency:'EUR'}} </h5>
+        <h5> {{producto.fechaLanzamiento | date:'dd/MM/yyyy'}} </h5>
+    </div>
+</div>
+
+<input type="text" (change)="addTarea($event)">
+
+
+<ul>
+    <li *ngFor="let tarea of tareas"> {{tarea}} </li>
+</ul>
+
+
+<input type="text" [(ngModel)]="filtro">
+
+<ul>
+    <li *ngFor="let tarea of tareas | filtro:filtro"> {{tarea}} </li>
+</ul>
+
+
+
+<pre> {{datosPost1 | async | json}} </pre>
